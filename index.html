@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio cartographique — Paule</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero" id="hero">
+    <nav aria-label="Navigation principale">
+      <a href="#cartes">Cartes</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hero-text">
+      <h1>Jabiro Ntamushobora</h1>
+      <p class="lead">Ce portfolio regroupe les travaux cartographiques réalisés durant mon parcours universitaire, entre 2022 et 2025. Des communes des alpes suisses, au quartier des parisiens, en passant par le désert de New Cairo, chaque projet m’ont permis d’explorer une question territoriale et de progresser dans la maîtrise des outils qui permettent de la mettre en carte.</p>
+    </div>
+    <p class="readout" id="readout" aria-hidden="true"></p>
+  </header>
+
+  <main>
+    <section id="cartes">
+      <h2>Cartes</h2>
+      <p class="intro">Filtrez par thème, puis cliquez sur une carte pour lire sa description et voir les compétences mobilisées.</p>
+      <div class="filters" id="filters" role="group" aria-label="Filtrer les cartes par thème"></div>
+      <ul class="grid" id="grid"></ul>
+    </section>
+
+    <section id="competences">
+      <h2>Compétences</h2>
+      <!-- Modifie, ajoute ou supprime les <li> ci-dessous -->
+      <ul class="skills">
+        <li><strong>QGIS</strong> Géotraitements, jointures, analyses raster et réseau, modèles, mise en page de cartes.</li>
+        <li><strong>Analyse spatiale</strong> Statistiques spatiales, systèmes complexes, visibilité, accessibilité.</li>
+        <li><strong>Python</strong> Numpy, Pandas, Geopanda, Matplotlib, Seaborn, Scikit learn, PyTorch et TensorFlowscikit-learn.</li>
+        <li><strong>Télédétection</strong> Google Earth Engine et Matlab.</li>
+        <li><strong>Cartographie web</strong> Cartes interactives en JavaScript et D3.js.</li>
+        
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Si vous êtes intéréssé par ces projets, vous pouvez me contacter à cet adresse email suivante: <a href="mailto:ton.adresse@exemple.ch">jabiro.ntamushobora@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year"></span> Jabiro Ntamushobora</p></footer>
+
+  <dialog id="detail" aria-labelledby="detail-title">
+    <button class="close" id="close" aria-label="Fermer">Fermer</button>
+    <div class="detail-visual" id="detail-visual"></div>
+    <div class="detail-body">
+      <h3 id="detail-title"></h3>
+      <p class="meta" id="detail-meta"></p>
+      <p id="detail-desc"></p>
+      <a class="btn" id="detail-link" target="_blank" rel="noopener" hidden>Voir le projet</a>
+      <h4>Compétences mobilisées</h4>
+      <ul id="detail-skills"></ul>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
